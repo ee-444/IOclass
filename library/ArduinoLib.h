@@ -16,7 +16,7 @@
 //#include <time.h>
 
 // MCU IO library and defines
-//#include <avr/io.h>
+#include <avr/io.h>
 #include "ArduinoPins.h"
 
 // Members of the Library

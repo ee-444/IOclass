@@ -398,7 +398,7 @@ LOAD c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/avr
 
 .debug_macinfo
  *(.debug_macinfo)
-OUTPUT(Arduino.elf elf32-avr)
+OUTPUT(IOclass.elf elf32-avr)
 LOAD linker stubs
 
 .debug_ranges   0x00000000       0x18

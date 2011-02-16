@@ -1,5 +1,5 @@
 
-Arduino.elf:     file format elf32-avr
+IOclass.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
@@ -652,11 +652,11 @@ Cio pin1 (PIN_PB5, PINTYPE_OUTPUT);
 	pin1 = 0;
 	tmp = pin1;
 	while(1){
-		for(uint32_t i=0; i<80000; i++);
- 340:	80 38       	cpi	r24, 0x80	; 128
- 342:	28 e3       	ldi	r18, 0x38	; 56
+		for(uint32_t i=0; i<280000; i++);
+ 340:	80 3c       	cpi	r24, 0xC0	; 192
+ 342:	25 e4       	ldi	r18, 0x45	; 69
  344:	92 07       	cpc	r25, r18
- 346:	21 e0       	ldi	r18, 0x01	; 1
+ 346:	24 e0       	ldi	r18, 0x04	; 4
  348:	a2 07       	cpc	r26, r18
  34a:	20 e0       	ldi	r18, 0x00	; 0
  34c:	b2 07       	cpc	r27, r18
@@ -686,7 +686,7 @@ Cio pin1 (PIN_PB5, PINTYPE_OUTPUT);
 	pin1 = 0;
 	tmp = pin1;
 	while(1){
-		for(uint32_t i=0; i<80000; i++);
+		for(uint32_t i=0; i<280000; i++);
  36e:	01 96       	adiw	r24, 0x01	; 1
  370:	a1 1d       	adc	r26, r1
  372:	b1 1d       	adc	r27, r1

@@ -5,7 +5,7 @@
 ## General Flags
 PROJECT = IOclass
 MCU = atmega328p
-TARGET = Arduino.elf
+TARGET = IOclass.elf
 CC = avr-gcc
 
 CPP = avr-g++
@@ -15,7 +15,7 @@ COMMON = -mmcu=$(MCU)
 
 ## Compile options common for all C compilation units.
 CFLAGS = $(COMMON)
-CFLAGS += -Wall -gdwarf-2   -std=c99           -DF_CPU=16000000UL -O2 -fsigned-char -funsigned-bitfields -fpack-struct -fshort-enums
+CFLAGS += -Wall -gdwarf-2   -std=c99              -DF_CPU=16000000UL -O2 -fsigned-char -funsigned-bitfields -fpack-struct -fshort-enums
 CFLAGS += -MD -MP -MT $(*F).o -MF dep/$(@F).d 
 
 ## Assembly specific flags
@@ -25,7 +25,7 @@ ASMFLAGS += -x assembler-with-cpp -Wa,-gdwarf2
 
 ## Linker flags
 LDFLAGS = $(COMMON)
-LDFLAGS +=  -Wl,-Map=Arduino.map
+LDFLAGS +=  -Wl,-Map=IOclass.map
 
 
 ## Intel Hex file production flags
@@ -46,7 +46,7 @@ OBJECTS = Cio.o main.o
 LINKONLYOBJECTS = 
 
 ## Build
-all: $(TARGET) Arduino.hex Arduino.eep Arduino.lss size
+all: $(TARGET) IOclass.hex IOclass.eep IOclass.lss size
 
 ## Compile
 Cio.o: ../source/Cio.cpp
@@ -75,7 +75,7 @@ size: ${TARGET}
 ## Clean target
 .PHONY: clean
 clean:
-	-rm -rf $(OBJECTS) Arduino.elf dep/* Arduino.hex Arduino.eep Arduino.lss Arduino.map
+	-rm -rf $(OBJECTS) IOclass.elf dep/* IOclass.hex IOclass.eep IOclass.lss IOclass.map
 
 
 ## Other dependencies

@@ -13,9 +13,9 @@
 //	PINx
 //  DDx
 //  PORTx
-#define PINB *(volatile uint8_t *)0x23
-#define PINC *(volatile uint8_t *)0x26
-#define PIND *(volatile uint8_t *)0x29
+//#define PINB *(volatile uint8_t *)0x23
+//#define PINC *(volatile uint8_t *)0x26
+//#define PIND *(volatile uint8_t *)0x29
 
 // namespace used for Library variables and privacy
 namespace ArduinoLibrary{
