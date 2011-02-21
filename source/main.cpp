@@ -1,14 +1,15 @@
 // 
+//
 // Test implementation file
 //
 
-#include "main.h"
+#include "ArduinoLib.h"
 
 Cio pin1 (PIN_PB5, PINTYPE_OUTPUT);
 
 int main (void)
 {
-	uint8_t tmp = 0xff;
+	uint32_t tmp = 0xff;
 	pin1 = 1;
 	tmp = pin1;
 	pin1 = 0;

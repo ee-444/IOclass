@@ -1,8 +1,20 @@
-//
-// 	Author: 	sgrove
-//	Target: 	Arduino (328p for now)
-// 	Project:	EE-444
-//
+// $Id$  
+
+/**  
+
+  * @file Cio.cpp  
+  * The source file for class Cio.  This is a class to handle digital input
+  * and output pins for Atmel atmega MCU's
+  *  
+  * @brief This file contains the class member functions for Cio - digital input and output control.  
+  *  
+  * @author sgrove   
+  *
+  * @version 1.01   
+  *
+  */ 
+
+// $Log$ 
 
 #include "Cio.h"
 
@@ -50,6 +62,11 @@ Cio::Cio(PinName name, PinType type, BuiltInPullUp pullup)
 	PinState(type);
 	// set the pullup if necessary
 	PullUp(pullup);
+}
+
+Cio::~Cio()
+{
+
 }
 
 void Cio::PinState(PinType type)

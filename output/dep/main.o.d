@@ -1,4 +1,4 @@
-main.o: ../source/main.cpp ../source/main.h \
+main.o: ../source/main.cpp \
  B:\Atmel\ Projects\IOclass\library/ArduinoLib.h \
  c:\program\ files\atmel\avr\ tools\avr\ toolchain\bin\../lib/gcc/avr/4.4.3/../../../../avr/include/stdio.h \
  c:\program\ files\atmel\avr\ tools\avr\ toolchain\bin\../lib/gcc/avr/4.4.3/../../../../avr/include/inttypes.h \
@@ -18,8 +18,6 @@ main.o: ../source/main.cpp ../source/main.h \
  c:\program\ files\atmel\avr\ tools\avr\ toolchain\bin\../lib/gcc/avr/4.4.3/../../../../avr/include/avr/lock.h \
  B:\Atmel\ Projects\IOclass\library/ArduinoPins.h \
  B:\Atmel\ Projects\IOclass\source/Cio.h
-
-../source/main.h:
 
 B:\Atmel\ Projects\IOclass\library/ArduinoLib.h:
 
