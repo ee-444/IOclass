@@ -34,7 +34,7 @@ private:
 	// the amount of shifting to get to the pins bit location
 	uint8_t _shift_amt;
 	// Write operation only used by the overloaded operators 
-	void Write(uint8_t);
+	void write(uint8_t);
 
 public:
  	
@@ -64,7 +64,7 @@ public:
 							input or output.  This can later be changed in the program
 
   	*/ 
-	void PinState(PinType type);
+	void pinState(PinType type);
 	
 	/**  
     	Used to enable or disable the internal pullup resistor on an input pin (INPUT PIN ONLY).
@@ -75,19 +75,19 @@ public:
 								disabled for outputs
 
   	*/ 
-	void PullUp(BuiltInPullUp pullup);
+	void pullUp(BuiltInPullUp pullup);
 
 	/**  
     	Used to make the output of an output pin a logic 1 (OUTPUT PIN ONLY).  Has no functionallity
 		if the object is an input
   	*/
-	void SetPin();
+	void setPin();
 
 	/**  
     	Used to make the output of an output pin a logic 0 (OUTPUT PIN ONLY).  Has no functionallity
 		if the object is an input
   	*/
-	void ClrPin();
+	void clrPin();
 
 	/**  
     	Used to read the logic level of a digital input or output pin
@@ -95,14 +95,14 @@ public:
 		@return		The logic level pf the pin ( 1 or 0 )
 
   	*/
-	uint8_t Read();
+	uint8_t read();
 
 	/**  
     	Overloaded overator for "=".  Changes only occur if the object is an OUTPUT.
 		Used for shorthand notation while coding.
   	*/
 	Cio& operator= (uint8_t in){ 
-		Write(in); 
+		write(in); 
 		return *this; 
 	}
 
@@ -113,7 +113,7 @@ public:
 		input or an output.
   	*/
 	Cio& operator= (Cio& rhs){
-		Write(rhs.Read()); 
+		write(rhs.read()); 
 		return *this; 
 	}
 
@@ -122,7 +122,7 @@ public:
 		or output into a variable of any type.
   	*/
 	operator uint8_t(){
-		return Read(); 
+		return read(); 
 	}
 };
 

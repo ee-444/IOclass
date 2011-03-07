@@ -59,9 +59,9 @@ Cio::Cio(PinName name, PinType type, BuiltInPullUp pullup)
 		#endif
 	}
 	// set up the pin according to the parameters
-	PinState(type);
+	pinState(type);
 	// set the pullup if necessary
-	PullUp(pullup);
+	pullUp(pullup);
 }
 
 Cio::~Cio()
@@ -69,14 +69,14 @@ Cio::~Cio()
 
 }
 
-void Cio::PinState(PinType type)
+void Cio::pinState(PinType type)
 {
 	// change the state to input or output
 	*(uint8_t*)(_base_peripheral_address+1) &= ~(type << _shift_amt);
 	*(uint8_t*)(_base_peripheral_address+1) |= (type << _shift_amt);
 }
 
-void Cio::PullUp(BuiltInPullUp pullup)
+void Cio::pullUp(BuiltInPullUp pullup)
 {
 	// only can be done to input pins (0 = input, 1 = output)
 	if ((*(uint8_t*)(_base_peripheral_address+1) & (1 << _shift_amt)) != (1 << _shift_amt)){
@@ -86,7 +86,7 @@ void Cio::PullUp(BuiltInPullUp pullup)
 	}
 }
 
-void Cio::SetPin()
+void Cio::setPin()
 {
 	// only can be done to output pins (0 = input, 1 = output)
 	if((*(uint8_t*)(_base_peripheral_address+1) & (1 << _shift_amt)) == (1 << _shift_amt)){
@@ -95,7 +95,7 @@ void Cio::SetPin()
 	} 
 }
 
-void Cio::ClrPin()
+void Cio::clrPin()
 {
 	// only can be done to output pins (0 = input, 1 = output)
 	if((*(uint8_t*)(_base_peripheral_address+1) & (1 << _shift_amt)) == (1 << _shift_amt)){
@@ -104,19 +104,19 @@ void Cio::ClrPin()
 	} 
 }
 
-uint8_t Cio::Read()
+uint8_t Cio::read()
 {
 	uint8_t result = (*(uint8_t*)(_base_peripheral_address) & (1 << _shift_amt));
 	return (result >> _shift_amt);
 }
 
-void Cio::Write(uint8_t value)
+void Cio::write(uint8_t value)
 {
 	if (value){
-		SetPin();
+		setPin();
 	}
 	else{
-		ClrPin();
+		clrPin();
 	}
 }
 

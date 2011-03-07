@@ -1,5 +1,4 @@
-main.o: ../source/main.cpp \
- B:\Atmel\ Projects\IOclass\library/ArduinoLib.h \
+main.o: ../source/main.cpp B:\atmel_projects\IOclass\library/ArduinoLib.h \
  c:\program\ files\atmel\avr\ tools\avr\ toolchain\bin\../lib/gcc/avr/4.4.3/../../../../avr/include/stdio.h \
  c:\program\ files\atmel\avr\ tools\avr\ toolchain\bin\../lib/gcc/avr/4.4.3/../../../../avr/include/inttypes.h \
  c:\program\ files\atmel\avr\ tools\avr\ toolchain\bin\../lib/gcc/avr/4.4.3/../../../../avr/include/stdint.h \
@@ -16,10 +15,10 @@ main.o: ../source/main.cpp \
  c:\program\ files\atmel\avr\ tools\avr\ toolchain\bin\../lib/gcc/avr/4.4.3/../../../../avr/include/avr/version.h \
  c:\program\ files\atmel\avr\ tools\avr\ toolchain\bin\../lib/gcc/avr/4.4.3/../../../../avr/include/avr/fuse.h \
  c:\program\ files\atmel\avr\ tools\avr\ toolchain\bin\../lib/gcc/avr/4.4.3/../../../../avr/include/avr/lock.h \
- B:\Atmel\ Projects\IOclass\library/ArduinoPins.h \
- B:\Atmel\ Projects\IOclass\source/Cio.h
+ B:\atmel_projects\IOclass\library/ArduinoPins.h \
+ B:\atmel_projects\IOclass\source/Cio.h
 
-B:\Atmel\ Projects\IOclass\library/ArduinoLib.h:
+B:\atmel_projects\IOclass\library/ArduinoLib.h:
 
 c:\program\ files\atmel\avr\ tools\avr\ toolchain\bin\../lib/gcc/avr/4.4.3/../../../../avr/include/stdio.h:
 
@@ -53,6 +52,6 @@ c:\program\ files\atmel\avr\ tools\avr\ toolchain\bin\../lib/gcc/avr/4.4.3/../..
 
 c:\program\ files\atmel\avr\ tools\avr\ toolchain\bin\../lib/gcc/avr/4.4.3/../../../../avr/include/avr/lock.h:
 
-B:\Atmel\ Projects\IOclass\library/ArduinoPins.h:
+B:\atmel_projects\IOclass\library/ArduinoPins.h:
 
-B:\Atmel\ Projects\IOclass\source/Cio.h:
+B:\atmel_projects\IOclass\source/Cio.h:

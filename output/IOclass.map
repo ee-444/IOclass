@@ -211,14 +211,14 @@ LOAD c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/avr
  .text          0x000000aa      0x260 Cio.o
                 0x000000aa                ArduinoLibrary::Cio::~Cio()
                 0x000000ac                ArduinoLibrary::Cio::~Cio()
-                0x000000ae                ArduinoLibrary::Cio::PinState(ArduinoLibrary::PinType)
-                0x000000f4                ArduinoLibrary::Cio::PullUp(ArduinoLibrary::BuiltInPullUp)
+                0x000000ae                ArduinoLibrary::Cio::pinState(ArduinoLibrary::PinType)
+                0x000000f4                ArduinoLibrary::Cio::pullUp(ArduinoLibrary::BuiltInPullUp)
                 0x0000015c                ArduinoLibrary::Cio::Cio(ArduinoLibrary::PinName, ArduinoLibrary::PinType, ArduinoLibrary::BuiltInPullUp)
                 0x000001da                ArduinoLibrary::Cio::Cio(ArduinoLibrary::PinName, ArduinoLibrary::PinType, ArduinoLibrary::BuiltInPullUp)
-                0x00000258                ArduinoLibrary::Cio::SetPin()
-                0x00000292                ArduinoLibrary::Cio::ClrPin()
-                0x000002ce                ArduinoLibrary::Cio::Read()
-                0x000002fa                ArduinoLibrary::Cio::Write(unsigned char)
+                0x00000258                ArduinoLibrary::Cio::setPin()
+                0x00000292                ArduinoLibrary::Cio::clrPin()
+                0x000002ce                ArduinoLibrary::Cio::read()
+                0x000002fa                ArduinoLibrary::Cio::write(unsigned char)
  .text          0x0000030a       0xac main.o
                 0x0000030a                main
  .text          0x000003b6        0x0 c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/avr5\libgcc.a(_exit.o)
@@ -395,11 +395,11 @@ LOAD c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/avr
  .debug_frame   0x00000000       0xb0 Cio.o
  .debug_frame   0x000000b0       0x50 main.o
 
-.debug_str      0x00000000      0x455
+.debug_str      0x00000000      0x45c
  *(.debug_str)
- .debug_str     0x00000000      0x3d0 Cio.o
+ .debug_str     0x00000000      0x3d7 Cio.o
                                 0x418 (size before relaxing)
- .debug_str     0x000003d0       0x85 main.o
+ .debug_str     0x000003d7       0x85 main.o
                                 0x468 (size before relaxing)
 
 .debug_loc      0x00000000      0x2cf

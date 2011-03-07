@@ -23,11 +23,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
   9 .debug_frame  00000100  00000000  00000000  00002044  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    00000455  00000000  00000000  00002144  2**0
+ 10 .debug_str    0000045c  00000000  00000000  00002144  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    000002cf  00000000  00000000  00002599  2**0
+ 11 .debug_loc    000002cf  00000000  00000000  000025a0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000018  00000000  00000000  00002868  2**0
+ 12 .debug_ranges 00000018  00000000  00000000  0000286f  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -117,9 +117,9 @@ Cio::~Cio()
 000000ac <_ZN14ArduinoLibrary3CioD1Ev>:
   ac:	08 95       	ret
 
-000000ae <_ZN14ArduinoLibrary3Cio8PinStateENS_7PinTypeE>:
+000000ae <_ZN14ArduinoLibrary3Cio8pinStateENS_7PinTypeE>:
 
-void Cio::PinState(PinType type)
+void Cio::pinState(PinType type)
 {
   ae:	fc 01       	movw	r30, r24
 	// change the state to input or output
@@ -129,11 +129,11 @@ void Cio::PinState(PinType type)
   b4:	70 e0       	ldi	r23, 0x00	; 0
   b6:	cb 01       	movw	r24, r22
   b8:	02 80       	ldd	r0, Z+2	; 0x02
-  ba:	02 c0       	rjmp	.+4      	; 0xc0 <_ZN14ArduinoLibrary3Cio8PinStateENS_7PinTypeE+0x12>
+  ba:	02 c0       	rjmp	.+4      	; 0xc0 <_ZN14ArduinoLibrary3Cio8pinStateENS_7PinTypeE+0x12>
   bc:	88 0f       	add	r24, r24
   be:	99 1f       	adc	r25, r25
   c0:	0a 94       	dec	r0
-  c2:	e2 f7       	brpl	.-8      	; 0xbc <_ZN14ArduinoLibrary3Cio8PinStateENS_7PinTypeE+0xe>
+  c2:	e2 f7       	brpl	.-8      	; 0xbc <_ZN14ArduinoLibrary3Cio8pinStateENS_7PinTypeE+0xe>
   c4:	98 2f       	mov	r25, r24
   c6:	90 95       	com	r25
   c8:	11 96       	adiw	r26, 0x01	; 1
@@ -146,11 +146,11 @@ void Cio::PinState(PinType type)
   d4:	a0 81       	ld	r26, Z
   d6:	b1 81       	ldd	r27, Z+1	; 0x01
   d8:	02 80       	ldd	r0, Z+2	; 0x02
-  da:	02 c0       	rjmp	.+4      	; 0xe0 <_ZN14ArduinoLibrary3Cio8PinStateENS_7PinTypeE+0x32>
+  da:	02 c0       	rjmp	.+4      	; 0xe0 <_ZN14ArduinoLibrary3Cio8pinStateENS_7PinTypeE+0x32>
   dc:	66 0f       	add	r22, r22
   de:	77 1f       	adc	r23, r23
   e0:	0a 94       	dec	r0
-  e2:	e2 f7       	brpl	.-8      	; 0xdc <_ZN14ArduinoLibrary3Cio8PinStateENS_7PinTypeE+0x2e>
+  e2:	e2 f7       	brpl	.-8      	; 0xdc <_ZN14ArduinoLibrary3Cio8pinStateENS_7PinTypeE+0x2e>
   e4:	11 96       	adiw	r26, 0x01	; 1
   e6:	8c 91       	ld	r24, X
   e8:	11 97       	sbiw	r26, 0x01	; 1
@@ -161,9 +161,9 @@ void Cio::PinState(PinType type)
 }
   f2:	08 95       	ret
 
-000000f4 <_ZN14ArduinoLibrary3Cio6PullUpENS_13BuiltInPullUpE>:
+000000f4 <_ZN14ArduinoLibrary3Cio6pullUpENS_13BuiltInPullUpE>:
 
-void Cio::PullUp(BuiltInPullUp pullup)
+void Cio::pullUp(BuiltInPullUp pullup)
 {
   f4:	fc 01       	movw	r30, r24
 	// only can be done to input pins (0 = input, 1 = output)
@@ -174,11 +174,11 @@ void Cio::PullUp(BuiltInPullUp pullup)
   fc:	81 e0       	ldi	r24, 0x01	; 1
   fe:	90 e0       	ldi	r25, 0x00	; 0
  100:	04 2e       	mov	r0, r20
- 102:	02 c0       	rjmp	.+4      	; 0x108 <_ZN14ArduinoLibrary3Cio6PullUpENS_13BuiltInPullUpE+0x14>
+ 102:	02 c0       	rjmp	.+4      	; 0x108 <_ZN14ArduinoLibrary3Cio6pullUpENS_13BuiltInPullUpE+0x14>
  104:	88 0f       	add	r24, r24
  106:	99 1f       	adc	r25, r25
  108:	0a 94       	dec	r0
- 10a:	e2 f7       	brpl	.-8      	; 0x104 <_ZN14ArduinoLibrary3Cio6PullUpENS_13BuiltInPullUpE+0x10>
+ 10a:	e2 f7       	brpl	.-8      	; 0x104 <_ZN14ArduinoLibrary3Cio6pullUpENS_13BuiltInPullUpE+0x10>
  10c:	11 96       	adiw	r26, 0x01	; 1
  10e:	2c 91       	ld	r18, X
  110:	11 97       	sbiw	r26, 0x01	; 1
@@ -187,16 +187,16 @@ void Cio::PullUp(BuiltInPullUp pullup)
  116:	39 23       	and	r19, r25
  118:	82 17       	cp	r24, r18
  11a:	93 07       	cpc	r25, r19
- 11c:	f1 f0       	breq	.+60     	; 0x15a <_ZN14ArduinoLibrary3Cio6PullUpENS_13BuiltInPullUpE+0x66>
+ 11c:	f1 f0       	breq	.+60     	; 0x15a <_ZN14ArduinoLibrary3Cio6pullUpENS_13BuiltInPullUpE+0x66>
 		// set the bit of the associated pin
 		*(uint8_t*)(_base_peripheral_address+2) &= ~(pullup << _shift_amt);
  11e:	70 e0       	ldi	r23, 0x00	; 0
  120:	cb 01       	movw	r24, r22
- 122:	02 c0       	rjmp	.+4      	; 0x128 <_ZN14ArduinoLibrary3Cio6PullUpENS_13BuiltInPullUpE+0x34>
+ 122:	02 c0       	rjmp	.+4      	; 0x128 <_ZN14ArduinoLibrary3Cio6pullUpENS_13BuiltInPullUpE+0x34>
  124:	88 0f       	add	r24, r24
  126:	99 1f       	adc	r25, r25
  128:	4a 95       	dec	r20
- 12a:	e2 f7       	brpl	.-8      	; 0x124 <_ZN14ArduinoLibrary3Cio6PullUpENS_13BuiltInPullUpE+0x30>
+ 12a:	e2 f7       	brpl	.-8      	; 0x124 <_ZN14ArduinoLibrary3Cio6pullUpENS_13BuiltInPullUpE+0x30>
  12c:	ac 01       	movw	r20, r24
  12e:	40 95       	com	r20
  130:	12 96       	adiw	r26, 0x02	; 2
@@ -209,11 +209,11 @@ void Cio::PullUp(BuiltInPullUp pullup)
  13c:	a0 81       	ld	r26, Z
  13e:	b1 81       	ldd	r27, Z+1	; 0x01
  140:	02 80       	ldd	r0, Z+2	; 0x02
- 142:	02 c0       	rjmp	.+4      	; 0x148 <_ZN14ArduinoLibrary3Cio6PullUpENS_13BuiltInPullUpE+0x54>
+ 142:	02 c0       	rjmp	.+4      	; 0x148 <_ZN14ArduinoLibrary3Cio6pullUpENS_13BuiltInPullUpE+0x54>
  144:	66 0f       	add	r22, r22
  146:	77 1f       	adc	r23, r23
  148:	0a 94       	dec	r0
- 14a:	e2 f7       	brpl	.-8      	; 0x144 <_ZN14ArduinoLibrary3Cio6PullUpENS_13BuiltInPullUpE+0x50>
+ 14a:	e2 f7       	brpl	.-8      	; 0x144 <_ZN14ArduinoLibrary3Cio6pullUpENS_13BuiltInPullUpE+0x50>
  14c:	12 96       	adiw	r26, 0x02	; 2
  14e:	8c 91       	ld	r24, X
  150:	12 97       	sbiw	r26, 0x02	; 2
@@ -290,17 +290,17 @@ Cio::Cio(PinName name, PinType type, BuiltInPullUp pullup)
 		#endif
 	}
 	// set up the pin according to the parameters
-	PinState(type);
+	pinState(type);
  19a:	c8 01       	movw	r24, r16
  19c:	64 2f       	mov	r22, r20
  19e:	29 83       	std	Y+1, r18	; 0x01
- 1a0:	0e 94 57 00 	call	0xae	; 0xae <_ZN14ArduinoLibrary3Cio8PinStateENS_7PinTypeE>
+ 1a0:	0e 94 57 00 	call	0xae	; 0xae <_ZN14ArduinoLibrary3Cio8pinStateENS_7PinTypeE>
 	// set the pullup if necessary
-	PullUp(pullup);
+	pullUp(pullup);
  1a4:	c8 01       	movw	r24, r16
  1a6:	29 81       	ldd	r18, Y+1	; 0x01
  1a8:	62 2f       	mov	r22, r18
- 1aa:	0e 94 7a 00 	call	0xf4	; 0xf4 <_ZN14ArduinoLibrary3Cio6PullUpENS_13BuiltInPullUpE>
+ 1aa:	0e 94 7a 00 	call	0xf4	; 0xf4 <_ZN14ArduinoLibrary3Cio6pullUpENS_13BuiltInPullUpE>
 }
  1ae:	0f 90       	pop	r0
  1b0:	cf 91       	pop	r28
@@ -408,17 +408,17 @@ Cio::Cio(PinName name, PinType type, BuiltInPullUp pullup)
 		#endif
 	}
 	// set up the pin according to the parameters
-	PinState(type);
+	pinState(type);
  218:	c8 01       	movw	r24, r16
  21a:	64 2f       	mov	r22, r20
  21c:	29 83       	std	Y+1, r18	; 0x01
- 21e:	0e 94 57 00 	call	0xae	; 0xae <_ZN14ArduinoLibrary3Cio8PinStateENS_7PinTypeE>
+ 21e:	0e 94 57 00 	call	0xae	; 0xae <_ZN14ArduinoLibrary3Cio8pinStateENS_7PinTypeE>
 	// set the pullup if necessary
-	PullUp(pullup);
+	pullUp(pullup);
  222:	c8 01       	movw	r24, r16
  224:	29 81       	ldd	r18, Y+1	; 0x01
  226:	62 2f       	mov	r22, r18
- 228:	0e 94 7a 00 	call	0xf4	; 0xf4 <_ZN14ArduinoLibrary3Cio6PullUpENS_13BuiltInPullUpE>
+ 228:	0e 94 7a 00 	call	0xf4	; 0xf4 <_ZN14ArduinoLibrary3Cio6pullUpENS_13BuiltInPullUpE>
 }
  22c:	0f 90       	pop	r0
  22e:	cf 91       	pop	r28
@@ -459,12 +459,12 @@ Cio::Cio(PinName name, PinType type, BuiltInPullUp pullup)
  254:	62 83       	std	Z+2, r22	; 0x02
  256:	e0 cf       	rjmp	.-64     	; 0x218 <_ZN14ArduinoLibrary3CioC2ENS_7PinNameENS_7PinTypeENS_13BuiltInPullUpE+0x3e>
 
-00000258 <_ZN14ArduinoLibrary3Cio6SetPinEv>:
+00000258 <_ZN14ArduinoLibrary3Cio6setPinEv>:
 		*(uint8_t*)(_base_peripheral_address+2) |= (pullup << _shift_amt);	
 	}
 }
 
-void Cio::SetPin()
+void Cio::setPin()
 {
  258:	fc 01       	movw	r30, r24
 	// only can be done to output pins (0 = input, 1 = output)
@@ -474,11 +474,11 @@ void Cio::SetPin()
  25e:	21 e0       	ldi	r18, 0x01	; 1
  260:	30 e0       	ldi	r19, 0x00	; 0
  262:	02 80       	ldd	r0, Z+2	; 0x02
- 264:	02 c0       	rjmp	.+4      	; 0x26a <_ZN14ArduinoLibrary3Cio6SetPinEv+0x12>
+ 264:	02 c0       	rjmp	.+4      	; 0x26a <_ZN14ArduinoLibrary3Cio6setPinEv+0x12>
  266:	22 0f       	add	r18, r18
  268:	33 1f       	adc	r19, r19
  26a:	0a 94       	dec	r0
- 26c:	e2 f7       	brpl	.-8      	; 0x266 <_ZN14ArduinoLibrary3Cio6SetPinEv+0xe>
+ 26c:	e2 f7       	brpl	.-8      	; 0x266 <_ZN14ArduinoLibrary3Cio6setPinEv+0xe>
  26e:	11 96       	adiw	r26, 0x01	; 1
  270:	8c 91       	ld	r24, X
  272:	11 97       	sbiw	r26, 0x01	; 1
@@ -487,7 +487,7 @@ void Cio::SetPin()
  278:	93 23       	and	r25, r19
  27a:	28 17       	cp	r18, r24
  27c:	39 07       	cpc	r19, r25
- 27e:	09 f0       	breq	.+2      	; 0x282 <_ZN14ArduinoLibrary3Cio6SetPinEv+0x2a>
+ 27e:	09 f0       	breq	.+2      	; 0x282 <_ZN14ArduinoLibrary3Cio6setPinEv+0x2a>
  280:	08 95       	ret
 		// write to the bit location in the register associated with this object
 		*(uint8_t*)(_base_peripheral_address+2) |= (1 << _shift_amt);
@@ -500,11 +500,11 @@ void Cio::SetPin()
  28e:	12 97       	sbiw	r26, 0x02	; 2
  290:	08 95       	ret
 
-00000292 <_ZN14ArduinoLibrary3Cio6ClrPinEv>:
+00000292 <_ZN14ArduinoLibrary3Cio6clrPinEv>:
 	} 
 }
 
-void Cio::ClrPin()
+void Cio::clrPin()
 {
  292:	fc 01       	movw	r30, r24
 	// only can be done to output pins (0 = input, 1 = output)
@@ -514,11 +514,11 @@ void Cio::ClrPin()
  298:	21 e0       	ldi	r18, 0x01	; 1
  29a:	30 e0       	ldi	r19, 0x00	; 0
  29c:	02 80       	ldd	r0, Z+2	; 0x02
- 29e:	02 c0       	rjmp	.+4      	; 0x2a4 <_ZN14ArduinoLibrary3Cio6ClrPinEv+0x12>
+ 29e:	02 c0       	rjmp	.+4      	; 0x2a4 <_ZN14ArduinoLibrary3Cio6clrPinEv+0x12>
  2a0:	22 0f       	add	r18, r18
  2a2:	33 1f       	adc	r19, r19
  2a4:	0a 94       	dec	r0
- 2a6:	e2 f7       	brpl	.-8      	; 0x2a0 <_ZN14ArduinoLibrary3Cio6ClrPinEv+0xe>
+ 2a6:	e2 f7       	brpl	.-8      	; 0x2a0 <_ZN14ArduinoLibrary3Cio6clrPinEv+0xe>
  2a8:	11 96       	adiw	r26, 0x01	; 1
  2aa:	8c 91       	ld	r24, X
  2ac:	11 97       	sbiw	r26, 0x01	; 1
@@ -527,7 +527,7 @@ void Cio::ClrPin()
  2b2:	93 23       	and	r25, r19
  2b4:	28 17       	cp	r18, r24
  2b6:	39 07       	cpc	r19, r25
- 2b8:	09 f0       	breq	.+2      	; 0x2bc <_ZN14ArduinoLibrary3Cio6ClrPinEv+0x2a>
+ 2b8:	09 f0       	breq	.+2      	; 0x2bc <_ZN14ArduinoLibrary3Cio6clrPinEv+0x2a>
  2ba:	08 95       	ret
 		// write to the bit location in the register associated with this object
 		*(uint8_t*)(_base_peripheral_address+2) &= ~(1 << _shift_amt);
@@ -541,11 +541,11 @@ void Cio::ClrPin()
  2ca:	12 97       	sbiw	r26, 0x02	; 2
  2cc:	08 95       	ret
 
-000002ce <_ZN14ArduinoLibrary3Cio4ReadEv>:
+000002ce <_ZN14ArduinoLibrary3Cio4readEv>:
 	} 
 }
 
-uint8_t Cio::Read()
+uint8_t Cio::read()
 {
  2ce:	fc 01       	movw	r30, r24
 	uint8_t result = (*(uint8_t*)(_base_peripheral_address) & (1 << _shift_amt));
@@ -553,95 +553,95 @@ uint8_t Cio::Read()
  2d2:	21 e0       	ldi	r18, 0x01	; 1
  2d4:	30 e0       	ldi	r19, 0x00	; 0
  2d6:	04 2e       	mov	r0, r20
- 2d8:	02 c0       	rjmp	.+4      	; 0x2de <_ZN14ArduinoLibrary3Cio4ReadEv+0x10>
+ 2d8:	02 c0       	rjmp	.+4      	; 0x2de <_ZN14ArduinoLibrary3Cio4readEv+0x10>
  2da:	22 0f       	add	r18, r18
  2dc:	33 1f       	adc	r19, r19
  2de:	0a 94       	dec	r0
- 2e0:	e2 f7       	brpl	.-8      	; 0x2da <_ZN14ArduinoLibrary3Cio4ReadEv+0xc>
+ 2e0:	e2 f7       	brpl	.-8      	; 0x2da <_ZN14ArduinoLibrary3Cio4readEv+0xc>
  2e2:	01 90       	ld	r0, Z+
  2e4:	f0 81       	ld	r31, Z
  2e6:	e0 2d       	mov	r30, r0
  2e8:	80 81       	ld	r24, Z
  2ea:	82 23       	and	r24, r18
  2ec:	90 e0       	ldi	r25, 0x00	; 0
- 2ee:	02 c0       	rjmp	.+4      	; 0x2f4 <_ZN14ArduinoLibrary3Cio4ReadEv+0x26>
+ 2ee:	02 c0       	rjmp	.+4      	; 0x2f4 <_ZN14ArduinoLibrary3Cio4readEv+0x26>
  2f0:	95 95       	asr	r25
  2f2:	87 95       	ror	r24
  2f4:	4a 95       	dec	r20
- 2f6:	e2 f7       	brpl	.-8      	; 0x2f0 <_ZN14ArduinoLibrary3Cio4ReadEv+0x22>
+ 2f6:	e2 f7       	brpl	.-8      	; 0x2f0 <_ZN14ArduinoLibrary3Cio4readEv+0x22>
 	return (result >> _shift_amt);
 }
  2f8:	08 95       	ret
 
-000002fa <_ZN14ArduinoLibrary3Cio5WriteEh>:
+000002fa <_ZN14ArduinoLibrary3Cio5writeEh>:
 
-void Cio::Write(uint8_t value)
+void Cio::write(uint8_t value)
 {
 	if (value){
  2fa:	66 23       	and	r22, r22
- 2fc:	19 f4       	brne	.+6      	; 0x304 <_ZN14ArduinoLibrary3Cio5WriteEh+0xa>
-		SetPin();
+ 2fc:	19 f4       	brne	.+6      	; 0x304 <_ZN14ArduinoLibrary3Cio5writeEh+0xa>
+		setPin();
 	}
 	else{
-		ClrPin();
- 2fe:	0e 94 49 01 	call	0x292	; 0x292 <_ZN14ArduinoLibrary3Cio6ClrPinEv>
+		clrPin();
+ 2fe:	0e 94 49 01 	call	0x292	; 0x292 <_ZN14ArduinoLibrary3Cio6clrPinEv>
  302:	08 95       	ret
 }
 
-void Cio::Write(uint8_t value)
+void Cio::write(uint8_t value)
 {
 	if (value){
-		SetPin();
- 304:	0e 94 2c 01 	call	0x258	; 0x258 <_ZN14ArduinoLibrary3Cio6SetPinEv>
+		setPin();
+ 304:	0e 94 2c 01 	call	0x258	; 0x258 <_ZN14ArduinoLibrary3Cio6setPinEv>
  308:	08 95       	ret
 
 0000030a <main>:
-		@param
-		@return
-
+	/**  
+    	Overloaded overator for "=".  Changes only occur if the object is an OUTPUT.
+		Used for shorthand notation while coding.
   	*/
 	Cio& operator= (uint8_t in){ 
-		Write(in); 
+		write(in); 
  30a:	80 e0       	ldi	r24, 0x00	; 0
  30c:	91 e0       	ldi	r25, 0x01	; 1
  30e:	61 e0       	ldi	r22, 0x01	; 1
- 310:	0e 94 7d 01 	call	0x2fa	; 0x2fa <_ZN14ArduinoLibrary3Cio5WriteEh>
-		@param
-		@return
-
+ 310:	0e 94 7d 01 	call	0x2fa	; 0x2fa <_ZN14ArduinoLibrary3Cio5writeEh>
+	/**  
+    	Overloaded overator for "=".  This variant is used to read the state on an input
+		or output into a variable of any type.
   	*/
 	operator uint8_t(){
-		return Read(); 
+		return read(); 
  314:	80 e0       	ldi	r24, 0x00	; 0
  316:	91 e0       	ldi	r25, 0x01	; 1
- 318:	0e 94 67 01 	call	0x2ce	; 0x2ce <_ZN14ArduinoLibrary3Cio4ReadEv>
-		@param
-		@return
-
+ 318:	0e 94 67 01 	call	0x2ce	; 0x2ce <_ZN14ArduinoLibrary3Cio4readEv>
+	/**  
+    	Overloaded overator for "=".  Changes only occur if the object is an OUTPUT.
+		Used for shorthand notation while coding.
   	*/
 	Cio& operator= (uint8_t in){ 
-		Write(in); 
+		write(in); 
  31c:	80 e0       	ldi	r24, 0x00	; 0
  31e:	91 e0       	ldi	r25, 0x01	; 1
  320:	60 e0       	ldi	r22, 0x00	; 0
- 322:	0e 94 7d 01 	call	0x2fa	; 0x2fa <_ZN14ArduinoLibrary3Cio5WriteEh>
-		@param
-		@return
-
+ 322:	0e 94 7d 01 	call	0x2fa	; 0x2fa <_ZN14ArduinoLibrary3Cio5writeEh>
+	/**  
+    	Overloaded overator for "=".  This variant is used to read the state on an input
+		or output into a variable of any type.
   	*/
 	operator uint8_t(){
-		return Read(); 
+		return read(); 
  326:	80 e0       	ldi	r24, 0x00	; 0
  328:	91 e0       	ldi	r25, 0x01	; 1
- 32a:	0e 94 67 01 	call	0x2ce	; 0x2ce <_ZN14ArduinoLibrary3Cio4ReadEv>
+ 32a:	0e 94 67 01 	call	0x2ce	; 0x2ce <_ZN14ArduinoLibrary3Cio4readEv>
  32e:	80 e0       	ldi	r24, 0x00	; 0
  330:	90 e0       	ldi	r25, 0x00	; 0
  332:	dc 01       	movw	r26, r24
-	pin1 = 1;
-	tmp = pin1;
 	pin1 = 0;
 	tmp = pin1;
+
 	while(1){
+
 		for(uint32_t i=0; i<280000; i++);
  334:	80 3c       	cpi	r24, 0xC0	; 192
  336:	25 e4       	ldi	r18, 0x45	; 69
@@ -653,29 +653,30 @@ void Cio::Write(uint8_t value)
  342:	78 f0       	brcs	.+30     	; 0x362 <main+0x58>
  344:	80 e0       	ldi	r24, 0x00	; 0
  346:	91 e0       	ldi	r25, 0x01	; 1
- 348:	0e 94 67 01 	call	0x2ce	; 0x2ce <_ZN14ArduinoLibrary3Cio4ReadEv>
+ 348:	0e 94 67 01 	call	0x2ce	; 0x2ce <_ZN14ArduinoLibrary3Cio4readEv>
+		
 		if (pin1 == 1)
  34c:	81 30       	cpi	r24, 0x01	; 1
  34e:	69 f0       	breq	.+26     	; 0x36a <main+0x60>
-		@param
-		@return
-
+	/**  
+    	Overloaded overator for "=".  Changes only occur if the object is an OUTPUT.
+		Used for shorthand notation while coding.
   	*/
 	Cio& operator= (uint8_t in){ 
-		Write(in); 
+		write(in); 
  350:	80 e0       	ldi	r24, 0x00	; 0
  352:	91 e0       	ldi	r25, 0x01	; 1
  354:	61 e0       	ldi	r22, 0x01	; 1
- 356:	0e 94 7d 01 	call	0x2fa	; 0x2fa <_ZN14ArduinoLibrary3Cio5WriteEh>
+ 356:	0e 94 7d 01 	call	0x2fa	; 0x2fa <_ZN14ArduinoLibrary3Cio5writeEh>
  35a:	80 e0       	ldi	r24, 0x00	; 0
  35c:	90 e0       	ldi	r25, 0x00	; 0
  35e:	dc 01       	movw	r26, r24
  360:	e9 cf       	rjmp	.-46     	; 0x334 <main+0x2a>
-	pin1 = 1;
-	tmp = pin1;
 	pin1 = 0;
 	tmp = pin1;
+
 	while(1){
+
 		for(uint32_t i=0; i<280000; i++);
  362:	01 96       	adiw	r24, 0x01	; 1
  364:	a1 1d       	adc	r26, r1
@@ -684,7 +685,7 @@ void Cio::Write(uint8_t value)
  36a:	80 e0       	ldi	r24, 0x00	; 0
  36c:	91 e0       	ldi	r25, 0x01	; 1
  36e:	60 e0       	ldi	r22, 0x00	; 0
- 370:	0e 94 7d 01 	call	0x2fa	; 0x2fa <_ZN14ArduinoLibrary3Cio5WriteEh>
+ 370:	0e 94 7d 01 	call	0x2fa	; 0x2fa <_ZN14ArduinoLibrary3Cio5writeEh>
  374:	80 e0       	ldi	r24, 0x00	; 0
  376:	90 e0       	ldi	r25, 0x00	; 0
  378:	dc 01       	movw	r26, r24
